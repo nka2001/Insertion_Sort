@@ -1,13 +1,31 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package com.mycompany.insertionsortv1;
 
 /**
- *
+ * Main class, holds main method, used to create and print out the results
+ * of insertion sort, as well as create test case objects. 
  * @author nicka
  */
 public class MainClass {
+    
+    /**
+     * Main Method
+     * @param args 
+     */
+    public static void main(String[] args) {
+        
+        InsertionSortOnPrimitives i = new InsertionSortOnPrimitives();
+        
+        i.inputSize(5);
+        i.fillArray();
+        i.printArray();
+        i.sort();
+        i.printArray();
+        
+        
+        
+        
+        
+    }
+    
     
 }
