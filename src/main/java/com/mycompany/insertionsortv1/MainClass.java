@@ -15,11 +15,22 @@ public class MainClass {
         
         InsertionSortOnPrimitives i = new InsertionSortOnPrimitives();
         
+        
+        /*
         i.inputSize(5);
         i.fillArray();
         i.printArray();
         i.sort();
         i.printArray();
+        */
+        
+        InsertionSortOnReference i2 = new InsertionSortOnReference();
+        
+        i2.setArraySize(6);
+        i2.fillArray();
+        i2.sort();
+        System.out.println(i2.toString());
+     
         
         
         
