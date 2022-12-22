@@ -1,5 +1,8 @@
 package com.mycompany.insertionsortv1;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Main class, holds main method, used to create and print out the results of
  * insertion sort, as well as create test case objects.
@@ -75,7 +78,37 @@ public class MainClass {
         i4.sort();//sort the prefilled array
         System.out.println(i4.toString());//then print it
         
-
+        
+        
+        
+        System.out.println("-----Test Case 5: Insertion Sort on Generic Type v1-----");
+        //fifth test case, it performs insertion sort on a list of generic types (ints)
+        InsertionSortOnGeneric i5 = new InsertionSortOnGeneric(3);//create the insertion sort object
+        
+        i5.fillList();//fill the list with user data
+        System.out.println(i5.toString());//print before the sort
+        i5.sort();//sort the array
+        System.out.println(i5.toString());//print after the sort
+        
+        
+        
+        System.out.println("-----Test Case 6: Insertion Sort on Generic Types v2-----");
+        //sixth test case, it performs insertion sort on a prefilled array, using the experimental constructor
+        
+        List l = new ArrayList();//create a generic list 
+        
+        l.add(10);
+        l.add(9);
+        l.add(1);
+        
+        
+        InsertionSortOnGeneric i6 = new InsertionSortOnGeneric(l.size(), l);//create the insertion sort object
+       
+        System.out.println(i6.toString()); //print before sort
+        i6.sort();//sort the list using insertion sort
+        System.out.println(i6.toString());//print after sort
+        
+        
     }
 
 }
