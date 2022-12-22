@@ -49,7 +49,7 @@ public class InsertionSortOnReference {
      */
     public InsertionSortOnReference(int arrSize, Integer[] arr) {
         this.sizeOfArr = arrSize;//size is set to whatever provided
-        this.arrToBeSorted = new Integer[sizeOfArr];//initialize the array to whatever size is provided
+        
         this.arrToBeSorted = arr;//set the array provided to the array created in this class?
     }
 
@@ -94,7 +94,7 @@ public class InsertionSortOnReference {
             Integer key = arrToBeSorted[j];//get the first element in the array, to compare later
             int i = j - 1;//get the position of the previous element, thats why start at 1
             
-            while(i >  0 && arrToBeSorted[i] > key){//if i is not 0 and i's data is bigger than key then swap
+            while(i >=  0 && arrToBeSorted[i] > key){//if i is not 0 and i's data is bigger than key then swap
                 arrToBeSorted[i+1] = arrToBeSorted[i];//move i to the next position in the array
                 i -= 1;//decrement i
             }
@@ -103,10 +103,7 @@ public class InsertionSortOnReference {
         }
         
         
-    }
-
-    public void printArray() {
-
+        
     }
 
     @Override
@@ -114,7 +111,7 @@ public class InsertionSortOnReference {
         String str = "";
         
         for(int i = 0; i < arrToBeSorted.length; i++){
-            str+= i + " : " + arrToBeSorted[i];
+            str+= i + " : " + arrToBeSorted[i] + "\n";
         }
         
         

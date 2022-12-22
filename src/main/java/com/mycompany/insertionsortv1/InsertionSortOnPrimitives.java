@@ -34,6 +34,13 @@ public class InsertionSortOnPrimitives {
         arrToBeSorted = new int[numOfInputs];
 
     }
+    
+    public InsertionSortOnPrimitives(int numOfInputs, int[] arr){
+        this.numOfInputs = numOfInputs;
+        this.arrToBeSorted = arr;
+        
+        
+    }
 
     /**
      * inputSize takes the size of the array to be sorted
@@ -68,14 +75,15 @@ public class InsertionSortOnPrimitives {
     }
 
     /**
-     * printArray() will print the contents of the array
+     * toString will return the contents of the array as a string
      */
-    public void printArray() {
-
+    @Override
+    public String toString() {
+        String str = "";
         for (int i = 0; i < arrToBeSorted.length; i++) {
-            System.out.println(i + " : " + arrToBeSorted[i]);
+            str += i + " : " + arrToBeSorted[i] + "\n";
         }
-
+        return str;
     }
     
     /**
@@ -87,7 +95,7 @@ public class InsertionSortOnPrimitives {
             int key = arrToBeSorted[j];
             int i = j-1;
             
-            while(i > 0 && arrToBeSorted[i] > key){
+            while(i >= 0 && arrToBeSorted[i] > key){
                 arrToBeSorted[i + 1] = arrToBeSorted[i];
                 i = i-1;
             }
